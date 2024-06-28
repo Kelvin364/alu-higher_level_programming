@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-def divisible_by_2(my_list=[]):
-    new_list = []
-    for i in range(len(my_list)):
-        if my_list[i] % 2 == 0:
-            new_list.append(True)
-        else:
-            new_list.append(False)
-    return new_list
+def multiple_returns(sentence):
+    my_tuple = ()
+    if len(sentence) == 0:
+        my_tuple = 0, "None"
+    else:
+        my_tuple = len(sentence), sentence[0]
+    return my_tuple
