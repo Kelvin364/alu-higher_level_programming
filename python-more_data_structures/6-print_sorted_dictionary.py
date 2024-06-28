@@ -1,5 +1,12 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
+
+
 def print_sorted_dictionary(a_dictionary):
-    sortedDict = sorted(a_dictionary.items())
-    for keys, value in sortedDict:
-        print(f"{keys}: {value}")
+    """
+    A function that prints a dictionary by ordered keys
+    """
+    keys = list(a_dictionary.keys())
+    keys.sort()
+    for key in keys:
+        print("{}: {}".format(key, a_dictionary[key]))
+        
