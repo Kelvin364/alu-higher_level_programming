@@ -6,10 +6,9 @@ def safe_print_list(my_list=[], x=0):
             print(my_list[i], end="")
             val += 1
             for x in range(val):
-                print("",end="")
+                print("", end="")
     except IndexError:
         pass
     print()
     return val
-
 
