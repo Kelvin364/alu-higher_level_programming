@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+'''Class Rectangle that inherits from BaseGeometry (7-base_geometry.py)'''
 class Rectangle:
+    '''Class Rectangle that inherits from BaseGeometry (7-base_geometry.py)'''
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
