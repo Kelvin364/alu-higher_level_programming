@@ -1,2 +1,4 @@
--- select only name and score
-SELECT (name, score) FROM second_table ORDER BY score DESC;
+-- display all records ordered by scores
+SELECT score, name
+FROM second_table
+ORDER BY score DESC;
