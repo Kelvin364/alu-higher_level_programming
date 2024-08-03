@@ -1,3 +1,3 @@
 #!/bin/bash
-# displays the body on as 200
+# connects in silent mode and allows redirection
 curl -sL "$1"

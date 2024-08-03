@@ -1,30 +1,21 @@
 #!/usr/bin/python3
-"""this fetches in the database"""
-
-
-from sqlalchemy import Column, Integer, String, create_engine, MetaData
+"""contains all the modules in the ORM with a"""
+from sqlalchemy import asc, create_engine
+import sys
 from sqlalchemy.orm import sessionmaker
-from sys import argv
 from model_state import Base, State
 
+
 if __name__ == "__main__":
-    """this is makes main"""
-
-    username = argv[1]
-    password = argv[2]
-    database = argv[3]
-    host = "localhost"
-    connection = f'mysql+mysqldb://{username}:\
-        {password}@{host}:3306/{database}'
-
-    engine = create_engine(connection)
-
-    Session = sessionmaker(bind=engine)
-
-    session5 = Session()
-
-    new_state = State(name='Louisiana')
-    session5.add(new_state)
-    session5.commit()
-    print(f'{new_state.id}')
-    session5.close()
+    """connectoin"""
+    creator = create_engine(
+        "mysql+mysqldb://{}:{}@localhost/{}".format(
+            sys.argv[1], sys.argv[2], sys.argv[3]),
+        pool_pre_ping=True)
+    Base.metadata.create_all(creator)
+    Session = sessionmaker(bind=creator)
+    session = Session()
+    louis = State(name="Louisiana")
+    session.add(louis)
+    session.commit()
+    print(louis.id)

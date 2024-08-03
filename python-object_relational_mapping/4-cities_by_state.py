@@ -1,36 +1,25 @@
 #!/usr/bin/python3
-"""
-a script that takes in an argument and displays
-all values in the states table of hbtn_0e_0_usa
-where name matches the argument
-"""
+"""  lists all states """
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
-    try:
-        db = MySQLdb.connect(
-                host='localhost',
-                user=sys.argv[1],
-                passwd=sys.argv[2],
-                db=sys.argv[3],
-                port=3306
-                )
-        cur = db.cursor()
-        cur.execute("SELECT a.id AS id, a.name AS name, b.name AS name "
-                    "FROM cities a "
-                    "INNER JOIN states b ON a.state_id = b.id "
-                    "ORDER BY a.id ASC")
-        rows = cur.fetchall()
-        for row in rows:
-            print(row)
-    except MySQLdb.Error as e:
-        try:
-            print("MySQL Error: [%d] - [%s]" % (e.args[0], e.args[1]))
-        except IndexError:
-            print("MySQL Error: [%s]" % str(e))
-    finally:
-        if 'cur' in locals() and cur is not None:
-            cur.close()
-        if 'db' in locals() and db is not None:
-            db.close()
+    """connects"""
+    db = MySQLdb.connect(
+            host="localhost",
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3],
+            port=3306
+            )
+    cr = db.cursor()
+    cr.execute(
+        "SELECT cities.id, cities.name, states.name FROM "
+        "cities INNER JOIN states ON states.id = cities.state_id"
+        )
+    tables = cr.fetchall()
+    for r in tables:
+        print(r)
+    cr.close()
+    db.close()

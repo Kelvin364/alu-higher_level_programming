@@ -1,25 +1,15 @@
 #!/usr/bin/python3
-"""This module creates sentences from a paragraph"""
+""""text_indentation"""
 
 
 def text_indentation(text):
-    """ This function accepts a text and fraction it into pieces"""
-    if not isinstance(text, str):
+    """ text indentation
+    """
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    result = ""
-    newline_required = True
+    for delim in ".:?":
+        text = (delim + "\n\n").join(
+            [line.strip(" ") for line in text.split(delim)])
 
-    for char in text:
-        if char in '.?:':
-            result += char + "\n\n"
-            newline_required = True
-        else:
-            if newline_required:
-                if not char.isspace():
-                    result += char
-                    newline_required = False
-            else:
-                result += char
-
-    print(result)
+    print("{}".format(text), end="")

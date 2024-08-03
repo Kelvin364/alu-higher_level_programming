@@ -1,5 +1,3 @@
-#0x0C. Python - Almost a circle
-Python
-OOP
- By: Guillaume
- Weight: 1
+python-almost_a_circle
+======================
+Python almost a circle is a project that is meant to practice making of packages and proper project architecture making of a project

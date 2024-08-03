@@ -1,1 +1,3 @@
-# this directory is python network 0#
+python-network_0
+================
+A project to practice networking

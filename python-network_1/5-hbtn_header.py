@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""this uses request to get header"""
-import requests
+"""Displays the header"""
+
 import sys
+import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]

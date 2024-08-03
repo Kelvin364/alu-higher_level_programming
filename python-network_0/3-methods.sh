@@ -1,3 +1,3 @@
 #!/bin/bash
-# Display all HTTP methods the server of a given URL will accept.
-curl -sX OPTIONS "$1" | grep -o '<h1>.*</h1>'
+# takes URL, methods accepted by server
+curl -Is "$1" | grep "Allow" | cut -d " " -f 2- 

@@ -1,13 +1,20 @@
 #!/usr/bin/python3
-"""handlles error code"""
-import urllib.request
-import urllib.error
-import sys
-if __name__ == "__main__":
-    try:
-        url = sys.argv[1]
-        with urllib.request.urlopen(url) as resp:
-            print(resp.read().decode("utf-8"))
+"""scipt that intakes the url"""
 
-    except urllib.error.HTTPError as e:
-        print(f"Error code: {e.status}")
+from sys import argv
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
+
+
+if __name__ == "__main__":
+    "lets begin"
+    url = argv[1]
+    req = Request(url)
+
+    try:
+        with urlopen(req) as response:
+            print(response.read().decode("utf-8"))
+    except HTTPError as e:
+        print("Error code: {}".format(e.code))
+    except URLError as e:
+        print(e.reason)

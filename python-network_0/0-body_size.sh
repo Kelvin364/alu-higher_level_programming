@@ -1,3 +1,3 @@
 #!/bin/bash
-#this sends a requesst and gets the body from the passed Ip
+# sends a request in silent mode and displays byte size
 curl -s "$1" | wc -c
