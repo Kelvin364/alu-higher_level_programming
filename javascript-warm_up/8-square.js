@@ -2,7 +2,8 @@
 const myarg = parseInt(process.argv[2]);
 if (isNaN(myarg)) {
   console.log('Missing size');
-} else {
+}
+ else {
    for (let j =0 ; j < myarg; j++)
-       {console.log(j *('*'));}
+       console.log(j *('*'));
 }
