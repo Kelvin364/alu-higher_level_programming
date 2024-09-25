@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const myarg = process.argv -2 ;
-if (myarg === undefined)
+const myarg = process.argv [2,6] ;
+if (isNaN(myarg))
 {
     console.log('No argument')
 }
