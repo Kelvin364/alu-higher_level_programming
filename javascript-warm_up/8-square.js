@@ -5,5 +5,5 @@ if (isNaN(myarg)) {
 }
  else {
    for (let j =0 ; j < myarg; j++)
-       console.log(j *('*'));
+       console.log('*'.repeat(j));
 }
