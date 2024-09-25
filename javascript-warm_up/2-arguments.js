@@ -1,3 +1,9 @@
 #!/usr/bin/node
-const myVar = ('C is fun\nPython is cool\nJavaScript is amazing');
-if (myvar === null) or(myvar === unde);
+let myarg = process.argv.length -2;
+if (myarg === 0){
+    console.log('Argument found')
+}
+else {
+    console.log('No Argument')
+}
+
