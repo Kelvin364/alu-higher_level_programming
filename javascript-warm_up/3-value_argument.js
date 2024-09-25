@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const myarg = process.argv.slice(2) ;
-if (isNaN(myarg))
+const myarg = process.argv[2] ;
+if (myarg = undefined)
 {
-    console.log('No argument')
+    console.log('No argument');
 }
 else
 {
-  console.log(myarg)
+  console.log(myarg);
 }
