@@ -4,6 +4,6 @@ if (myarg === 0){
     console.log('No Argument')
 }
 else {
-    console.log('Argument found')
+    console.log('Arguments found')
 }
 
