@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const myarg = int(process.argv[2]);
+const myarg = parseInt(process.argv[2]);
 if (myarg === undefined) {
   console.log('Not a number');
 } else {
