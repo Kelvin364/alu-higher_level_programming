@@ -14,3 +14,4 @@ function factorial (n) {
         }
     }
 }
+factorial(myarg1);
