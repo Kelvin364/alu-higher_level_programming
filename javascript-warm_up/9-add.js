@@ -3,8 +3,7 @@ const myarg1 = process.argv[2];
 const myarg2 = process.argv[3];
 
 function add (myarg1,myarg2){
-sum === (myarg1 + myarg2)
-console.log(sum)
+return sum === (myarg1 + myarg2)
 }
 
-add.console(sum)
+console.log(add)
