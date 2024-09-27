@@ -7,4 +7,4 @@ sum === (myarg1+myarg2)
 console.log(sum)
 }
 
-add.sum()
+// add.sum()
