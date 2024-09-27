@@ -9,7 +9,8 @@ function factorial (n) {
     
     else {
         for ( i = n ; i > 0 ; i++){
-            fac = (n*i)
+            fac *= (n*i);
+            console.log(fac);
         }
     }
 }
