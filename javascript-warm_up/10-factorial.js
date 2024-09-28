@@ -10,7 +10,7 @@ function factorial (n) {
     for (i = n; i > 1; i--) {
       fac *= i;
     }
-    return BigInt(fac);
+    return fac;
   }
 }
 console.log(factorial(myarg1));
