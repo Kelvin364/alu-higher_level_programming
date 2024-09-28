@@ -8,12 +8,11 @@ function factorial (n) {
     }
     
     else {
-        for ( i = n ; i > 0 ; i--){
-            let fac;
-            fac *= (n*i);
-            let sum = fac;
-            console.log(sum);
+        let fac = 1;
+        for ( i = n ; i > 1 ; i--){
+            fac *= i;
+            return fac;
         }
     }
 }
-factorial(myarg1);
+console.log(factorial(myarg1))
