@@ -1,16 +1,11 @@
 #!/usr/bin/node
-const myarg1 = BigInt(process.argv[2]);
-
+const n = parseInt(process.argv[2]);
 function factorial (n) {
-  if (n === 0 || n === 1) {
-    const fac = 1;
-    console.log(fac);
+  if (n === 0 || isNaN(n) || !n) {
+    n = 1;
+    return (n);
   } else {
-    let fac = 1;
-    for (let i = n; i > 1; i--) {
-      fac *= i;
-    }
-    return fac;
+    return (n * factorial(n - 1));
   }
 }
-console.log(factorial(myarg1));
+console.log(factorial(n));
