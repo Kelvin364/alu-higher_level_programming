@@ -8,7 +8,7 @@ function factorial (n) {
     }
     
     else {
-        let fac = 1;
+        BigInt(fac) = 1;
         for ( i = n ; i > 1 ; i--)
             {
             fac *= i;
