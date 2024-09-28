@@ -7,7 +7,7 @@ function factorial (n) {
     console.log(fac);
   } else {
     let fac = 1;
-    for (i = n; i > 1; i--) {
+    for (let i = n; i > 1; i--) {
       fac *= i;
     }
     return fac;
