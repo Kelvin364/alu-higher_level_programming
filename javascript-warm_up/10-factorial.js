@@ -9,10 +9,11 @@ function factorial (n) {
     
     else {
         let fac = 1;
-        for ( i = n ; i > 1 ; i--){
+        for ( i = n ; i > 1 ; i--)
+            {
             fac *= i;
-            return fac;
         }
+        return fac;
     }
 }
 console.log(factorial(myarg1))
