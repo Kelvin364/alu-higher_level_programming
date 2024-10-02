@@ -5,5 +5,6 @@ if (isNaN(myVar)) {
 }
 else
 {
+    myVar = 333
     console.log("333")
 }
